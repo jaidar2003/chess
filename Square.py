@@ -1,6 +1,6 @@
 
 class Square:
-    def __init__(self, side):
+    def __init__(self, side=None):
         self.piece = None
 
     def occupy(self, piece):

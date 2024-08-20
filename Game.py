@@ -1,5 +1,6 @@
 from chess.Board import Board
-
+from chess.Piece import Piece
+from chess.Square import Square
 
 class ChessGame:
     def __init__(self):
@@ -8,14 +9,14 @@ class ChessGame:
 
     def play(self):
         while not self.is_game_over():
-            self.displat_board()
+            self.display_board()
             origin, destination = self.get_move
             if self.validate_move(origin, destination):
                 self.move_piece(origin, destination)
                 self.switch_turn()
 
     def validate_move(self, origin, destination):
-        pass
+        return True
 
     def move_piece(self, origin, destination):
         piece = self.board.grid[origin[0]][origin[1]].get_piece()
@@ -28,8 +29,8 @@ class ChessGame:
     def is_game_over(self):
         return False
 
-    def displat_board(self):
-        pass
+    def display_board(self):
+        self.board.show_board()
 
     def get_move(self, origin, destination):
         origin = (int(input("introduce fila de origen: ")), int(input("introduce columna de origen: ")))
