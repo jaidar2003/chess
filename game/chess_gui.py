@@ -1,7 +1,7 @@
 import pygame
 import sys
-from chess.Board import Board
-from chess.Piece import King, Queen, Bishop, Knight, Rook, Pawn
+from game.Board import Board
+from game.Piece import King, Queen, Bishop, Knight, Rook, Pawn
 
 
 pygame.init()
