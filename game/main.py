@@ -1,6 +1,5 @@
-from game.game import ChessGame
+from game.chess import ChessGame
 
 if __name__ == '__main__':
     game = ChessGame()
-    game.display_board()
     game.play()
