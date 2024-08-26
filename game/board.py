@@ -34,6 +34,13 @@ class Board:
         for i in range(COLUMNS):
             self.grid[6][i].occupy(Pawn("white"))
 
+
+    def move_piece(self, origin, destination):
+        piece = self.grid[origin[0]][origin[1]].get_piece()
+        if piece:
+            self.grid[origin[0]][origin[1]].release()
+            self.grid[destination[0]][destination[1]].occupy(piece)
+
     def show_board(self):
         for row in range(self.rows):
             for column in range(self.columns):
