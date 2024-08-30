@@ -12,7 +12,7 @@ class Piece:
             "QUEEN": {"WHITE": "♕", "BLACK": "♛"},
             "KING": {"WHITE": "♔", "BLACK": "♚"}
         }
-        return symbols[self.__type__][self.__color__]
+        return symbols[self.__type__][self.__color__.upper()]
 
 
 class Rook(Piece):

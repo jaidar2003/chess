@@ -9,11 +9,13 @@ class ChessGame:
         if move_sequence is None:
             move_sequence = []
 
+        self.display_board()  # Mostrar el tablero solo una vez al comienzo
+
         while not self.is_game_over():
-            self.display_board()
             origin, destination = self.get_move(move_sequence)
             if self.validate_move(origin, destination):
                 self.move_piece(origin, destination)
+                self.display_board()  # Mostrar el tablero después de mover una pieza
                 self.switch_turn()
             else:
                 print("Movimiento inválido. Inténtalo de nuevo.")

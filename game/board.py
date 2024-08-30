@@ -41,9 +41,11 @@ class Board:
             self.grid[origin[0]][origin[1]].release()
             self.grid[destination[0]][destination[1]].occupy(piece)
 
+
     def show_board(self):
         for row in range(self.rows):
             for column in range(self.columns):
                 piece = self.grid[row][column].get_piece()
-                print(piece if piece else '.', end=' ')
+                print(piece.show() if piece else '.', end=' ')
             print()
+
