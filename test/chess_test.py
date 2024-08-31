@@ -1,6 +1,6 @@
 import unittest
 from game.chess import ChessGame
-from game.piece import King
+from game.pieces import King
 
 class TestChessGame(unittest.TestCase):
 

@@ -1,6 +1,6 @@
 import unittest
 from game.square import Square
-from game.piece import Rook
+from game.pieces import Rook
 
 
 class TestSquare(unittest.TestCase):

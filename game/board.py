@@ -1,5 +1,5 @@
 from game.square import Square
-from game.piece import *
+from game.pieces import *
 
 ROWS = 8
 COLUMNS = 8
@@ -10,6 +10,7 @@ class Board:
         self.columns = COLUMNS
         self.grid = [[Square() for _ in range(self.columns)] for _ in range(self.rows)]
         self.initialize_pieces()
+
 
     def initialize_pieces(self):
         self.grid[0][0].occupy(Rook("black"))
